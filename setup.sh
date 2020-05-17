@@ -32,7 +32,7 @@ sudo mv nginx-default /etc/nginx/sites-enabled/default
 
 # nodejs
 cd ~
-curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt-get install nodejs
 sudo apt-get install build-essential
