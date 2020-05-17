@@ -3,7 +3,7 @@
 # curl -O -L https://raw.githubusercontent.com/token-cjg/hello_nodejs/master/app.sh
 
 # get the app
-git clone git@github.com:token-cjg/coronavirus-simulation.git -y
+git clone git clone https://github.com/token-cjg/coronavirus-simulation.git
 cd coronavirus-simulation
 sudo npm install
 pm2 start npm -- start
