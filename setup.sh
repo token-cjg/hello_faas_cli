@@ -40,12 +40,12 @@ sudo apt-get install -y build-essential
 # install PM2
 sudo npm install -g pm2
 
-# clone helloworld nodejs and run in background
-curl -O -L https://raw.githubusercontent.com/token-cjg/hello_nodejs/master/fixtures/hello.js
-sudo chmod +x ./hello.js
-pm2 start hello.js
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u cgoddard --hp /home/cgoddard
-systemctl status pm2-cgoddard
+# # clone helloworld nodejs and run in background
+# curl -O -L https://raw.githubusercontent.com/token-cjg/hello_nodejs/master/fixtures/hello.js
+# sudo chmod +x ./hello.js
+# pm2 start hello.js
+# sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u cgoddard --hp /home/cgoddard
+# systemctl status pm2-cgoddard
 
 # check nginx
 sudo nginx -t
