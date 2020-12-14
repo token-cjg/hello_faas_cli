@@ -13,8 +13,8 @@ sudo apt-get install -y nginx
 sudo ufw allow 'Nginx Full'
 sudo ufw allow ssh
 sudo ufw --force enable
-sudo ufw status
-sudo systemctl status nginx
+# sudo ufw status
+# sudo systemctl status nginx
 
 # nginx, HTTPS /w lets encrypt
 # note, need a domain - get one from freenom

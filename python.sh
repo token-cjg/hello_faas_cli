@@ -1,11 +1,16 @@
-sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
-sudo apt install python3-venv
+sudo apt update
+sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools -y
+sudo apt install python3-venv -y
 
 
 # get the Flask app
-git clone https://github.com/token-cjg/faas_cli_flask.git
+mkdir faas-cli-flask
 # Move into the parent directory for our Flask project.
 cd ~/faas-cli-flask
+mkdir app
+curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/app/main.py
+curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/wsgi.py
+mv main.py app/main.py
 
 # Create a virtual environment to store your Flask project’s Python requirements by typing:
 python3.6 -m venv myprojectenv
