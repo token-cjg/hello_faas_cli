@@ -30,7 +30,6 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-sudo groupadd docker
 sudo usermod -aG docker $USER
 
 #Log out and log back in so that your group membership is re-evaluated.
@@ -43,6 +42,10 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-git clone git@github.com:ivanpanshin/flask_gunicorn_nginx_docker.git
-cd flask_gunicorn_nginx_docker
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+wget https://github.com/ivanpanshin/flask_gunicorn_nginx_docker/archive/master.zip
+sudo apt-get install unzip
+
+cd flask_gunicorn_nginx_docker-master
 bash run_docker.sh
