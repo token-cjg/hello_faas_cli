@@ -4,6 +4,6 @@ server {
 
     location / {
       include proxy_params;
-      proxy_pass http://unix:/root/faas-cli-flask/faas_cli_flask.sock;
+      proxy_pass http://unix:/home/sammy/faas-cli-flask/faas_cli_flask.sock;
     }
 }
