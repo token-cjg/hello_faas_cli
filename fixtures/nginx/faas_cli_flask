@@ -3,7 +3,7 @@ server {
     server_name faascliflask.cthulu.tk;
 
     location / {
-        include proxy_params;
-        proxy_pass http://unix:/root/faas-cli-flask/faas_cli_flask.sock;
+      include proxy_params;
+      proxy_pass http://unix:/home/sammy/myproject/myproject.sock;
     }
 }

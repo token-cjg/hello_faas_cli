@@ -28,6 +28,8 @@ mv faas_cli_flask.service /etc/systemd/system/faas_cli_flask.service
 sudo systemctl start faas_cli_flask
 sudo systemctl enable faas_cli_flask
 
+# make sure that www-data can read the file
+sudo chmod 777 /root/faas-cli-flask/faas_cli_flask.sock
 # route nginx to the service
 curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/nginx/faas_cli_flask
 mv faas_cli_flask /etc/nginx/sites-available/faas_cli_flask

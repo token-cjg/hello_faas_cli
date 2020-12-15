@@ -6,4 +6,4 @@ sudo chmod +x ./nginx.sh
 sudo chmod +x ./python.sh
 
 bash nginx.sh
-bash app.sh
+bash python.sh
