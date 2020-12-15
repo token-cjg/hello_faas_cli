@@ -1,11 +1,11 @@
 sudo apt-get install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools -y
 sudo apt-get install python3-venv python3.8 pipenv -y
 
-
+cd /home/sammy
 # get the Flask app
 mkdir faas-cli-flask
 # Move into the parent directory for our Flask project.
-cd ~/faas-cli-flask
+cd /home/sammy/faas-cli-flask
 mkdir app
 curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/flaskapp/app/main.py
 curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/flaskapp/wsgi.py
@@ -32,7 +32,7 @@ mv faas_cli_flask.service /etc/systemd/system/faas_cli_flask.service
 sudo systemctl start faas_cli_flask
 sudo systemctl enable faas_cli_flask
 
-sudo chmod 777 /root/faas-cli-flask/faas_cli_flask.sock
+# sudo chmod 777 /home/sammy/faas-cli-flask/faas_cli_flask.sock
 # route nginx to the service
 curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/nginx/faas_cli_flask
 mv faas_cli_flask /etc/nginx/sites-available/faas_cli_flask
