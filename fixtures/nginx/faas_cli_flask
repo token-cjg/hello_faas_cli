@@ -1,9 +1,9 @@
 server {
     listen 80;
-    server_name your_domain www.your_domain;
+    server_name cthulu.tk www.cthulu.tk;
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/home/sammy/myproject/myproject.sock;
+        proxy_pass http://unix:/root/faas-cli-flask/faas_cli_flask.sock;
     }
 }

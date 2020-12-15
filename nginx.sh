@@ -20,7 +20,7 @@ sudo ufw --force enable
 # note, need a domain - get one from freenom
 sudo add-apt-repository ppa:certbot/certbot -y
 sudo apt-get update -y
-sudo apt-get install python-certbot-nginx -y
+sudo apt-get install python3-certbot-nginx -y
 sudo nginx -t
 sudo systemctl reload nginx
 sudo certbot --nginx -d faascliflask.cthulu.tk --keep-until-expiring --no-redirect --register-unsafely-without-email --agree-tos

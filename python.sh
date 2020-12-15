@@ -1,6 +1,5 @@
-sudo apt update
-sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools -y
-sudo apt install python3-venv python3.8 pipenv -y
+sudo apt-get install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools -y
+sudo apt-get install python3-venv python3.8 pipenv -y
 
 
 # get the Flask app
@@ -22,7 +21,7 @@ sudo ufw allow 5000
 VENV_PATH=$(pipenv --venv)
 
 curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/faas_cli_flask.service
-sed -i 's/replaceme/'"$VENV_PATH"'/g' faas_cli_flask.service
+sed -i 's@replaceme@'"$VENV_PATH"'@g' faas_cli_flask.service
 mv faas_cli_flask.service /etc/systemd/system/faas_cli_flask.service
 
 # run the service
