@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # non interactive add new user "sammy"
-useradd -m -s /bin/bash sammy
+adduser --disabled-password --gecos "" sammy
 
 # add to the sudo group
 usermod -aG sudo sammy
@@ -10,5 +10,5 @@ usermod -aG sudo sammy
 rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
 
 # switch to sammy
-#sudo su sammy
+sudo su sammy
 cd /home/sammy
