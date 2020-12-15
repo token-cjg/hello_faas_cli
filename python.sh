@@ -29,7 +29,7 @@ sudo systemctl start faas_cli_flask
 sudo systemctl enable faas_cli_flask
 
 # route nginx to the service
-curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/flaskapp/nginx/faas_cli_flask
+curl -O -L https://raw.githubusercontent.com/token-cjg/hello_faas_cli/master/fixtures/nginx/faas_cli_flask
 mv faas_cli_flask /etc/nginx/sites-available/faas_cli_flask
 
 # activate the nginx route
@@ -42,4 +42,4 @@ sudo systemctl restart nginx
 sudo ufw allow 'Nginx Full'
 
 # enable certbot
-sudo certbot --nginx -d faascliflask.cthulu.tk --keep-until-expiring --no-redirect --register-unsafely-without-email --agree-tos
+# sudo certbot --nginx -d faascliflask.cthulu.tk --keep-until-expiring --no-redirect --register-unsafely-without-email --agree-tos
