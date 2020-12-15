@@ -23,4 +23,3 @@ sudo apt-get update -y
 sudo apt-get install python3-certbot-nginx -y
 sudo nginx -t
 sudo systemctl reload nginx
-sudo certbot --nginx -d faascliflask.cthulu.tk --keep-until-expiring --no-redirect --register-unsafely-without-email --agree-tos

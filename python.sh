@@ -15,7 +15,7 @@ mv main.py app/main.py
 pipenv install wheel gunicorn flask
 
 # If you followed the initial server setup guide, you should have a UFW firewall enabled. To test the application, you need to allow access to port 5000:
-sudo ufw allow 5000
+# sudo ufw allow 5000
 
 # Set up a service to run this thing
 VENV_PATH=$(pipenv --venv)
@@ -38,5 +38,8 @@ sudo ln -s /etc/nginx/sites-available/faas_cli_flask /etc/nginx/sites-enabled
 # restart nginx to pick up the change
 sudo systemctl restart nginx
 
-sudo ufw delete allow 5000
+# sudo ufw delete allow 5000
 sudo ufw allow 'Nginx Full'
+
+# enable certbot
+sudo certbot --nginx -d faascliflask.cthulu.tk --keep-until-expiring --no-redirect --register-unsafely-without-email --agree-tos

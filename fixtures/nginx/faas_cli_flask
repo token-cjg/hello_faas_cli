@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name cthulu.tk www.cthulu.tk;
+    server_name faascliflask.cthulu.tk;
 
     location / {
         include proxy_params;
