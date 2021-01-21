@@ -20,6 +20,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 sudo usermod -aG docker $USER
 
+exit
 #Log out and log back in so that your group membership is re-evaluated.
 # If testing on a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.
 # On a desktop Linux environment such as X Windows, log out of your session completely and then log back in.
@@ -34,6 +35,7 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 wget https://github.com/token-cjg/flask_gunicorn_nginx_docker/archive/master.zip
 sudo apt-get install unzip
+unzip master.zip
 
 cd flask_gunicorn_nginx_docker-master
 bash run_docker.sh
