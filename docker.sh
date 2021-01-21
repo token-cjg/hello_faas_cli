@@ -32,7 +32,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-wget https://github.com/ivanpanshin/flask_gunicorn_nginx_docker/archive/master.zip
+wget https://github.com/token-cjg/flask_gunicorn_nginx_docker/archive/master.zip
 sudo apt-get install unzip
 
 cd flask_gunicorn_nginx_docker-master
