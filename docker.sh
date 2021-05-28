@@ -42,3 +42,9 @@ bash run_docker.sh
 
 # also, install jsonnet. This is required for compiling jsonnet files to yaml so that things can be built and published.
 sudo snap install jsonnet
+
+# we also need yq to convert from json to yaml
+sudo snap install yq
+
+# we should also install yamllint
+sudo apt-get install yamllint -y
