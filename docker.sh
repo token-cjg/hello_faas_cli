@@ -39,3 +39,6 @@ unzip master.zip
 
 cd flask_gunicorn_nginx_docker-master
 bash run_docker.sh
+
+# also, install jsonnet. This is required for compiling jsonnet files to yaml so that things can be built and published.
+sudo snap install jsonnet
