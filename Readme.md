@@ -36,3 +36,15 @@ faas-cli deploy -f catapi.yml
 ```
 7. Invoke the function
 `export OPENFAAS_URL=YOURFAASDHOSTURL && echo | faas-cli invoke catapi`
+
+### Building catapi.yml
+
+If you have a dockerhub account of your very own, and have an app id that you wish to apply, run
+
+```
+pushd fixtures
+jsonnet --ext-str dockerAccount='moohickey' --ext-str app_id='123' catapi.jsonnet > catapi.yml
+popd
+```
+
+in order to get your catapi.yaml
